@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 
@@ -29,7 +31,6 @@ const About = () => {
             className="app__profile-item"
             key={about.title + index}
           >
-            {console.log(about.imgUrl)}
             <img src={urlFor(about.imgUrl)} alt={about.title} />
             <h2 className="bold-text" style={{ marginTop: 20 }}>{about.title}</h2>
             <p className="p-text" style={{ marginTop: 10 }}>{about.description}</p>
