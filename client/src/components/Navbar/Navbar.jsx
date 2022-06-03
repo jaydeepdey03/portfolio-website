@@ -8,7 +8,6 @@ import './Navbar.scss';
 
 const Navbar = () => {
   const [toggle, setToggle] = useState(false);
-  const [loading, setLoading] = useState(false)
 
  
 
@@ -49,7 +48,6 @@ const Navbar = () => {
           </motion.div>
         )}
       </div>
-      <a href="https://drive.google.com/file/d/1kDgUEmuGUy5mcnjpEgKtN64yegmqcDbf/view?usp=sharing" target={`_blank`}> <button style={{padding: '1rem 1rem', borderRadius: '10px', border: 'none', backgroundColor: '#313bac', fontWeight: '900', color: 'white', transition: 'cubic-bezier(0.55, 0.085, 0.68, 0.53)', cursor: 'pointer  '}} type="button" className="p-text">{!loading ? 'Download Resume' : 'Downloading...'}</button></a>
     </nav>
   );
 };
