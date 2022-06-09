@@ -1,12 +1,17 @@
 /* eslint-disable */
 import React, { useState } from 'react';
-
+import countapi from 'countapi-js';
 import { images } from '../../constants';
 import { AppWrap, MotionWrap } from '../../wrapper';
 import { client } from '../../client';
 import './Footer.scss';
+import { CountProvider } from '../../context/Countcontext';
 
 const Footer = () => {
+
+  const context = React.useContext(CountProvider);
+  const { count } = context;
+
   const [formData, setFormData] = useState({ name: '', email: '', message: '' });
   const [isFormSubmitted, setIsFormSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
@@ -76,7 +81,12 @@ const Footer = () => {
           </h3>
         </div>
       )}
+
+      <div style={{ position: 'fixed', bottom: '2rem', color: 'red' }} >
+        <span style={{color: 'black'}}>Count</span>: {count}
+      </div>
     </>
+
   );
 };
 
