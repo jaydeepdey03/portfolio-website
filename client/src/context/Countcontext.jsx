@@ -11,7 +11,7 @@ const Countcontext = ({ children }) => {
 
     useEffect(()=> {
         async function showCount() {
-            const count = await fetch('https://api.countapi.xyz/get/jaydeepdey03.vercel.app/jaydeep')
+            const count = await fetch('https://api.countapi.xyz/update/jaydeepdey03.vercel.app/jaydeep?amount=1')
             const data = await count.json();
             setCount(data.value)
         }
