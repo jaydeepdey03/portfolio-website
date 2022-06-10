@@ -1,11 +1,11 @@
 /* eslint-disable */
-
-import React from 'react';
+import React, { useState, useEffect } from 'react'
 import { motion } from 'framer-motion';
 
 import { AppWrap } from '../../wrapper';
 import { images } from '../../constants';
 import './Header.scss';
+import { client } from '../../client';
 
 const scaleVariants = {
   whileInView: {
@@ -19,6 +19,16 @@ const scaleVariants = {
 };
 
 const Header = () => {
+
+  const [resumeLink, setResumeLink] = useState([])
+
+  useEffect(() => {
+    const query = `*[_type=='resume']{"fileURL":file.asset->url}`
+
+    client.fetch(query).then((data) => {
+    })
+  }, [])
+
   return (<div className="app__header app__flex">
     <motion.div
       whileInView={{ x: [-100, 0], opacity: [0, 1] }}
@@ -52,7 +62,7 @@ const Header = () => {
           <p className="p-text">A passionate frontend React and NextJS developer from India</p>
           {/* <p className="p-text"></p> */}
         </div>
-          <a href="https://drive.google.com/file/d/1kDgUEmuGUy5mcnjpEgKtN64yegmqcDbf/view?usp=sharing" target={`_blank`}> <button style={{ padding: '1rem 1rem', borderRadius: '10px', border: 'none', marginTop: '4rem', backgroundColor: '#313bac', fontWeight: '900', color: 'white', transition: 'cubic-bezier(0.55, 0.085, 0.68, 0.53)', cursor: 'pointer  ' }} type="button" className="p-text">{'Download Resume'}</button></a>
+          <a href="https://drive.google.com/file/d/1fOYSVSNHIo1R24COQ0W1iNItClA8lODF/view?usp=sharing" target={`_blank`}> <button style={{ padding: '1rem 1rem', borderRadius: '10px', border: 'none', marginTop: '4rem', backgroundColor: '#313bac', fontWeight: '900', color: 'white', transition: 'cubic-bezier(0.55, 0.085, 0.68, 0.53)', cursor: 'pointer  ' }} type="button" className="p-text">{'Download Resume'}</button></a>
       </div>
     </motion.div>
 
