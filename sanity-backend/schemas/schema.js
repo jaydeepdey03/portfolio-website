@@ -8,8 +8,9 @@ import experiences from './experiences'
 import skills from './skills'
 import workExperience from './workExperience'
 import contact from './contact'
+import resume from './resume'
 
 export default createSchema({
   name: 'default',
-  types: schemaTypes.concat([works, testimonials, brands, abouts, skills, workExperience, experiences, contact]),
+  types: schemaTypes.concat([resume, works, testimonials, brands, abouts, skills, workExperience, experiences, contact]),
 })
