@@ -83,7 +83,7 @@ const Footer = () => {
       )}
 
       <div style={{ position: 'fixed', bottom: '2rem', color: 'red' }} >
-        <span style={{color: 'black'}}>Count</span>: {count}
+        <span style={{color: 'black'}}>Count</span>: {count-17}
       </div>
     </>
 
