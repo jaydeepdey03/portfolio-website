@@ -62,7 +62,7 @@ const Header = () => {
           <p className="p-text">A passionate frontend React and NextJS developer from India</p>
           {/* <p className="p-text"></p> */}
         </div>
-          <a href="https://drive.google.com/file/d/1DUbTKJmNlBq9Tn2SFUlntPkFRGnaMAFb/view?usp=sharing" target={`_blank`}> <button style={{ padding: '1rem 1rem', borderRadius: '10px', border: 'none', marginTop: '4rem', backgroundColor: '#313bac', fontWeight: '900', color: 'white', transition: 'cubic-bezier(0.55, 0.085, 0.68, 0.53)', cursor: 'pointer  ' }} type="button" className="p-text">{'Download Resume'}</button></a>
+          <a href="https://drive.google.com/file/d/1Ne3QHSkoWy7z5JAaRthR44CogK7jqKHv/view?usp=sharing" target={`_blank`}> <button style={{ padding: '1rem 1rem', borderRadius: '10px', border: 'none', marginTop: '4rem', backgroundColor: '#313bac', fontWeight: '900', color: 'white', transition: 'cubic-bezier(0.55, 0.085, 0.68, 0.53)', cursor: 'pointer  ' }} type="button" className="p-text">{'Download Resume'}</button></a>
       </div>
     </motion.div>
 
